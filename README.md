@@ -1,6 +1,8 @@
 # fp-dataset-artifacts
 
-Project by Kaj Bostrom, Jifan Chen, and Greg Durrett. Code by Kaj Bostrom and Jifan Chen.
+Project analysis by Arnav Chopra and Zayaan Rahman
+
+Project outline by Kaj Bostrom, Jifan Chen, and Greg Durrett. Starter code by Kaj Bostrom and Jifan Chen.
 
 ## Getting Started
 You'll need Python >= 3.6 to run the code in this repo.
