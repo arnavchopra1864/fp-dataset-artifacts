@@ -1,0 +1,6 @@
+Trainer.__init__. Use processing_class instead.
+  trainer = trainer_class(
+100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1231/1231 [09:22<00:00,  2.19it/s]
+Evaluation results:
+{'eval_loss': 0.3941344618797302, 'eval_model_preparation_time': 0.0072, 'eval_accuracy': 0.8917902708053589, 'eval_runtime': 562.6818, 'eval_samples_per_second': 17.491, 'eval_steps_per_second': 2.188}
+PS C:\Users\zayaa\CS371N\fp-dataset-artifacts>
