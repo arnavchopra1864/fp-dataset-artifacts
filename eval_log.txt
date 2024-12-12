@@ -1,0 +1,19 @@
+12/8/2024:
+Trainer.__init__. Use processing_class instead.
+  trainer = trainer_class(
+100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1231/1231 [09:22<00:00,  2.19it/s]
+Evaluation results:
+{'eval_loss': 0.3941344618797302, 'eval_model_preparation_time': 0.0072, 'eval_accuracy': 0.8917902708053589, 'eval_runtime': 562.6818, 'eval_samples_per_second': 17.491, 'eval_steps_per_second': 2.188}
+PS C:\Users\zayaa\CS371N\fp-dataset-artifacts>
+
+12/12/2024:
+{'train_runtime': 1829.0887, 'train_samples_per_second': 150.175, 'train_steps_per_second': 18.772, 'train_loss': 0.5038649549244278, 'epoch': 0.5}
+100% 34336/34336 [26:42<00:00, 21.42it/s]
+100% 1231/1231 [00:19<00:00, 63.47it/s]
+100% 1231/1231 [00:18<00:00, 66.76it/s]
+Plotting confusion matrix
+[[2984  245  100]
+ [ 252 2685  298]
+ [ 115  290 2873]]
+Evaluation results:
+{'eval_loss': 0.3909284174442291, 'eval_accuracy': 0.867913007736206, 'eval_runtime': 19.4412, 'eval_samples_per_second': 506.244, 'eval_steps_per_second': 63.319, 'epoch': 0.5000072810939116}
