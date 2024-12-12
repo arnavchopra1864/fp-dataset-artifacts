@@ -81,7 +81,8 @@ def main():
     model_class = model_classes[args.task]
     # Initialize the model and tokenizer from the specified pretrained model/checkpoint
     model = model_class.from_pretrained(args.model, **task_kwargs)
-    model = model.to("cuda")
+    if training_args.device == 'cuda':
+        model = model.to("cuda")
     # Make tensor contiguous if needed https://github.com/huggingface/transformers/issues/28293
     if hasattr(model, 'electra'):
         for param in model.electra.parameters():
@@ -164,7 +165,7 @@ def main():
         eval_dataset=eval_dataset_featurized,
         tokenizer=tokenizer,
         compute_metrics=compute_metrics_and_store_predictions,
-        device='cuda' if training_args.device == 'cuda' else 'cpu'
+        device = 'cuda' if training_args.device == 'cuda' else 'cpu'
     )
     # Train and/or evaluate
     if training_args.do_train:
