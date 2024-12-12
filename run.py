@@ -81,8 +81,6 @@ def main():
     model_class = model_classes[args.task]
     # Initialize the model and tokenizer from the specified pretrained model/checkpoint
     model = model_class.from_pretrained(args.model, **task_kwargs)
-    if training_args.device == 'cuda':
-        model = model.to("cuda")
     # Make tensor contiguous if needed https://github.com/huggingface/transformers/issues/28293
     if hasattr(model, 'electra'):
         for param in model.electra.parameters():
@@ -165,7 +163,6 @@ def main():
         eval_dataset=eval_dataset_featurized,
         tokenizer=tokenizer,
         compute_metrics=compute_metrics_and_store_predictions,
-        device = 'cuda' if training_args.device == 'cuda' else 'cpu'
     )
     # Train and/or evaluate
     if training_args.do_train:
@@ -221,27 +218,30 @@ def main():
 
 import numpy as np
 from sklearn.metrics import confusion_matrix
-import seaborn as sns
-import matplotlib.pyplot as plt
+# import seaborn as sns
+# import matplotlib.pyplot as plt
 
 def plot_confusion_matrix(predictions, labels):
+    print("Plotting confusion matrix")
     pred_labels = np.argmax(predictions.predictions, axis=1)
     true_labels = labels
     
     cm = confusion_matrix(true_labels, pred_labels)
+
+    print(cm)
     
-    plt.figure(figsize=(10,8))
-    sns.heatmap(cm, 
-                annot=True, 
-                fmt='d', 
-                cmap='Blues',
-                xticklabels=['entailment', 'neutral', 'contradiction'],
-                yticklabels=['entailment', 'neutral', 'contradiction'])
-    plt.xlabel('Predicted')
-    plt.ylabel('True')
-    plt.title('Confusion Matrix')
-    plt.savefig('confusion_matrix.png')
-    plt.close()
+    # plt.figure(figsize=(10,8))
+    # sns.heatmap(cm, 
+    #             annot=True, 
+    #             fmt='d', 
+    #             cmap='Blues',
+    #             xticklabels=['entailment', 'neutral', 'contradiction'],
+    #             yticklabels=['entailment', 'neutral', 'contradiction'])
+    # plt.xlabel('Predicted')
+    # plt.ylabel('True')
+    # plt.title('Confusion Matrix')
+    # plt.savefig('confusion_matrix.png')
+    # plt.close()
 
 if __name__ == "__main__":
     main()
