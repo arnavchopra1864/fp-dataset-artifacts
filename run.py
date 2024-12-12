@@ -178,6 +178,10 @@ def main():
     if training_args.do_eval:
         results = trainer.evaluate(**eval_kwargs)
 
+        # TODO: remove this later
+        eval_predictions = trainer.predict(eval_dataset_featurized)
+        plot_confusion_matrix(eval_predictions, eval_dataset['label'])
+
         # To add custom metrics, you should replace the "compute_metrics" function (see comments above).
         #
         # If you want to change how predictions are computed, you should subclass Trainer and override the "prediction_step"
@@ -209,6 +213,32 @@ def main():
                     f.write(json.dumps(example_with_prediction))
                     f.write('\n')
 
+
+
+
+import numpy as np
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+def plot_confusion_matrix(predictions, labels):
+    pred_labels = np.argmax(predictions.predictions, axis=1)
+    true_labels = labels
+    
+    cm = confusion_matrix(true_labels, pred_labels)
+    
+    plt.figure(figsize=(10,8))
+    sns.heatmap(cm, 
+                annot=True, 
+                fmt='d', 
+                cmap='Blues',
+                xticklabels=['entailment', 'neutral', 'contradiction'],
+                yticklabels=['entailment', 'neutral', 'contradiction'])
+    plt.xlabel('Predicted')
+    plt.ylabel('True')
+    plt.title('Confusion Matrix')
+    plt.savefig('confusion_matrix.png')
+    plt.close()
 
 if __name__ == "__main__":
     main()
