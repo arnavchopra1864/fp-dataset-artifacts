@@ -1,0 +1,229 @@
+{
+    "blue": [
+        "azure",
+        "cerulean"
+    ],
+    "red": [
+        "crimson",
+        "scarlet"
+    ],
+    "green": [
+        "emerald",
+        "lime-green"
+    ],
+    "yellow": [
+        "amber"
+    ],
+    "orange": [
+        "tangerine"
+    ],
+    "purple": [
+        "violet",
+        "lavender"
+    ],
+    "pink": [
+        "magenta"
+    ],
+    "brown": [
+        "sepia",
+        "coffee-colored"
+    ],
+    "washing": [
+        "cleaning",
+        "scrubbing"
+    ],
+    "walking": [
+        "strolling",
+        "striding"
+    ],
+    "hugging": [
+        "embracing",
+        "cuddling"
+    ],
+    "goodbye": [
+        "bye",
+        "farewell"
+    ],
+    "eating": [
+        "consuming"
+    ],
+    "jumping": [
+        "leaping"
+    ],
+    "dancing": [
+        "prancing"
+    ],
+    "waiting": [
+        "anticipating"
+    ],
+    "leaving": [
+        "departing"
+    ],
+    "catching": [
+        "capturing"
+    ],
+    "women": [
+        "ladies",
+        "females"
+    ],
+    "woman": [
+        "lady",
+        "female"
+    ],
+    "sister": [
+        "sibling"
+    ],
+    "men": [
+        "gentlemen",
+        "males"
+    ],
+    "man": [
+        "gentleman",
+        "male"
+    ],
+    "kids": [
+        "children",
+        "youngsters"
+    ],
+    "children": [
+        "kids",
+        "youngsters"
+    ],
+    "child": [
+        "kid",
+        "youngster"
+    ],
+    "boy": [
+        "child",
+        "male child"
+    ],
+    "girl": [
+        "child",
+        "female child"
+    ],
+    "person": [
+        "individual"
+    ],
+    "senior": [
+        "elderly individual"
+    ],
+    "doctor": [
+        "physician",
+        "medic"
+    ],
+    "doctors": [
+        "physicians",
+        "medics"
+    ],
+    "teacher": [
+        "educator"
+    ],
+    "teachers": [
+        "educators"
+    ],
+    "scientist": [
+        "researcher"
+    ],
+    "scientists": [
+        "researchers"
+    ],
+    "artist": [
+        "painter"
+    ],
+    "musician": [
+        "instrumentalist"
+    ],
+    "singer": [
+        "vocalist"
+    ],
+    "car": [
+        "automobile"
+    ],
+    "road": [
+        "street"
+    ],
+    "surgery": [
+        "operation"
+    ],
+    "camera": [
+        "photographing device"
+    ],
+    "food": [
+        "nourishment",
+        "meal"
+    ],
+    "movie": [
+        "film"
+    ],
+    "bicyle": [
+        "bike",
+        "cycle",
+        "two-wheeler"
+    ],
+    "book": [
+        "novel"
+    ],
+    "phone": [
+        "telephone"
+    ],
+    "computer": [
+        "laptop"
+    ],
+    "house": [
+        "home"
+    ],
+    "dog": [
+        "canine"
+    ],
+    "cat": [
+        "feline"
+    ],
+    "plane": [
+        "airplane"
+    ],
+    "shirt": [
+        "garment"
+    ],
+    "shoes": [
+        "footwear"
+    ],
+    "long": [
+        "lengthy"
+    ],
+    "short": [
+        "low"
+    ],
+    "big": [
+        "large"
+    ],
+    "small": [
+        "little"
+    ],
+    "happy": [
+        "joyful"
+    ],
+    "sad": [
+        "unhappy"
+    ],
+    "angry": [
+        "furious"
+    ],
+    "tall": [
+        "high"
+    ],
+    "old": [
+        "elderly"
+    ],
+    "young": [
+        "youthful"
+    ],
+    "very": [
+        "extremely"
+    ],
+    "bad": [
+        "subpar"
+    ],
+    "good": [
+        "excellent"
+    ]
+}
