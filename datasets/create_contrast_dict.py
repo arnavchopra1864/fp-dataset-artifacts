@@ -30,28 +30,6 @@ def get_word_replacements(sentence):
     
     return options
 
-# test_data = []
-# with jsonlines.open('./datasets/snli_1.0/snli_1.0_dev.jsonl') as reader:
-#     for i, obj in enumerate(reader):
-#         if i < 50:
-#             test_data.append(obj)
-#         else:
-#             break
-
-# print("Analyzing potential replacements for 5 examples:")
-# for idx, example in enumerate(test_data):
-#     print(f"\nExample {idx + 1}:")
-    
-#     print("\nOriginal premise:", example['sentence1'])
-#     print("Original hypothesis:", example['sentence2'])
-#     print("Label:", example['gold_label'])
-#     hypothesis_options = get_word_replacements(example['sentence2'])
-
-#     print("\nPossible replacements for hypothesis:")
-#     for word, replacements in hypothesis_options.items():
-#         print(f"'{word}' could be replaced with: {replacements}")
-#     print("-" * 50)
-
 manual_replacements = {
     # colors
     'blue': ['azure', 'cerulean',],
