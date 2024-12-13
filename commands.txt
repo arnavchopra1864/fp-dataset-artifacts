@@ -1,0 +1,27 @@
+# trains on contrast set, evaluates on normal SNLI eval set
+! python3 fp-dataset-artifacts/run.py \
+    --do_train \
+    --task nli \
+    --dataset fp-dataset-artifacts/datasets/snli_1.0/snli_contrast_final.jsonl \
+    --output_dir ./trained_model/ \
+    --num_train_epochs 0.5 \
+    --do_eval
+
+import datasets
+# now finetune
+dataset = datasets.load_dataset('json', data_files={
+    'train': 'fp-dataset-artifacts/datasets/snli_1.0/snli_1.0_dev_converted.jsonl',
+    'validation': 'fp-dataset-artifacts/datasets/snli_1.0/snli_contrast_final.jsonl'
+})
+
+dataset = dataset.filter(lambda ex: ex['label'] != -1)
+
+# after you run load_dataset, this trains and evals on the contrast set
+! python3 fp-dataset-artifacts/run.py \
+    --do_train \
+    --task nli \
+    --dataset fp-dataset-artifacts/datasets/snli_1.0/snli_1.0_dev_converted.jsonl \
+    --output_dir ./contrast_model/ \
+    --num_train_epochs 3 \
+    --per_device_train_batch_size 64 \
+    --do_eval
