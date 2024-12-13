@@ -25,7 +25,7 @@ def convert_snli_format(input_path, output_path):
     
     return len(converted_data)
 
-input_file = './snli_1.0/snli_contrast_dev.jsonl'
-output_file = './snli_1.0/snli_contrast_final.jsonl'
+input_file = './snli_1.0/snli_1.0_dev.jsonl'
+output_file = './snli_1.0/snli_1.0_converted.jsonl'
 total = convert_snli_format(input_file, output_file)
 print(f"Converted {total} examples")
